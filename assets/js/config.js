@@ -81,6 +81,7 @@ export const CONFIG = {
       client: "Grotta Resort",
       location: "Musanze, Northern Rwanda",
       url: "https://grottaresort.rw/stay.html",
+      linkText: "See the rooms on Grotta Resort's website",
       // Facts from grottaresort.rw/stay.html (checked 30 Oct 2026); see docs/ASSET_CREDITS.md.
       summary:
         "An adventure resort 2 km from Volcanoes National Park, with 26 rooms and suites across six room types.",
@@ -110,7 +111,12 @@ export const CONFIG = {
       client: "Eagleview Farm",
       location: "Bugesera, Rwanda",
       url: "https://eagleviewfarm.rw/",
+      // Facts from eagleviewfarm.rw (checked 30 Oct 2026).
       summary: "A working lakeside retreat farm near Lake Mirayi, built around slow stays and farm-to-table dining.",
+      headline: "Sell the pace, not just the room.",
+      story:
+        "Eagleview Farm calls itself “not a hotel hidden in nature” but a working landscape by Lake Mirayi, where guests walk the gardens, meet Inyambo cows and watch fishermen return at sunset. Its website opens with that rhythm: “Stay longer. Walk slower. Breathe deeper.” Guests feel the experience before they book.",
+      linkText: "Visit Eagleview Farm",
       delivered: [
         "Website design & development",
         "Photography & video for social media",
@@ -119,14 +125,13 @@ export const CONFIG = {
       ],
       stages: [0, 1],
       results: [],
-      // Photo supplied by TODO Growth, 30 Oct 2026. Shown in review mode only until Eagleview approves publication.
       image: {
         src: "assets/media/eagleview/eagleview-room-1800.webp",
         alt: "An Eagleview Farm room: timber walls, a canopy bed with a mosquito net and a teal sofa beside the terrace door",
-        credit: "Photo: Eagleview Farm",
+        credit: "Photo: Eagleview Farm, used with permission",
       },
-      permission: "pending",
-      note: "Needs written consent. Booking runs on a third-party engine: never claim it.",
+      permission: "approved", // story and photography approved by Eagleview Farm, 30 Oct 2026
+      // Booking runs on a third-party engine: never claim it.
     },
   ],
 };

@@ -639,3 +639,54 @@ html.menu-open { overflow: hidden; }
   .legal__head { position: static; }
 }
 @media (max-width: 400px) { .legal-nav__back { font-size: 0.82rem; } }
+.final__contact li a { gap: 0.4em; }
+
+/* ── Footer: chapters index + contact rows ────────────────────────────── */
+.final .final__label { display: flex; align-items: center; gap: 0.9rem; margin-bottom: 1.1rem; font-size: 0.66rem; letter-spacing: 0.28em; color: rgba(201, 198, 187, 0.62); }
+.final .final__label::after { content: ""; flex: 1; height: 1px; background: linear-gradient(90deg, rgba(240, 201, 163, 0.35), transparent); }
+
+.final .fnav { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: clamp(1.4rem, 3vw, 2.8rem); }
+.final .fnav li { border-top: 1px solid rgba(243, 238, 230, 0.1); }
+.final .fnav li:nth-last-child(-n + 2) { border-bottom: 1px solid rgba(243, 238, 230, 0.1); }
+.final .fnav a { display: grid; grid-template-columns: 2.1rem minmax(0, 1fr) 1rem; align-items: baseline; gap: 0.4rem; min-height: 0; padding: 0.95rem 0 0.9rem; text-decoration: none; color: var(--on-dark); }
+.final .fnav b { font-family: var(--sans); font-size: 0.66rem; font-weight: 600; letter-spacing: 0.08em; color: var(--clay-light); font-variant-numeric: tabular-nums; }
+.final .fnav span { font-family: var(--serif); font-size: clamp(1.08rem, 1rem + 0.3vw, 1.28rem); line-height: 1.2; letter-spacing: -0.005em; transition: color 0.4s var(--ease), transform 0.5s var(--ease); }
+.final .fnav a::after { content: "→"; font-size: 0.9rem; color: var(--clay-light); opacity: 0; transform: translateX(-8px); transition: opacity 0.4s var(--ease), transform 0.5s var(--ease); }
+.final .fnav a:hover span, .final .fnav a:focus-visible span { color: #f0c9a3; font-style: italic; transform: translateX(4px); }
+.final .fnav a:hover::after, .final .fnav a:focus-visible::after { opacity: 1; transform: none; }
+
+.final .fcontact { display: grid; }
+.final .fcontact li { border-top: 1px solid rgba(243, 238, 230, 0.1); }
+.final .fcontact li:last-child { border-bottom: 1px solid rgba(243, 238, 230, 0.1); }
+.final .fcontact a { display: grid; grid-template-columns: 5.6rem minmax(0, 1fr) 1rem; align-items: baseline; gap: 0.8rem; min-height: 0; padding: 0.95rem 0 0.9rem; text-decoration: none; color: var(--on-dark); }
+.final .fcontact__k { font-family: var(--sans); font-size: 0.64rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(201, 198, 187, 0.62); }
+.final .fcontact__v { font-family: var(--serif); font-size: clamp(1.12rem, 1rem + 0.35vw, 1.34rem); line-height: 1.2; letter-spacing: 0.005em; font-variant-numeric: lining-nums; transition: color 0.4s var(--ease); overflow-wrap: anywhere; }
+.final .fcontact__go { font-size: 0.85rem; color: var(--clay-light); opacity: 0.45; transition: opacity 0.4s var(--ease), transform 0.5s var(--ease); }
+.final .fcontact a:hover .fcontact__v, .final .fcontact a:focus-visible .fcontact__v { color: #f0c9a3; }
+.final .fcontact a:hover .fcontact__go, .final .fcontact a:focus-visible .fcontact__go { opacity: 1; transform: translate(3px, -3px); }
+.final .fnav a:focus-visible, .final .fcontact a:focus-visible { outline-offset: 2px; }
+
+@media (max-width: 759px) {
+  .final .fnav { grid-template-columns: minmax(0, 1fr); }
+  .final .fnav li:nth-last-child(2) { border-bottom: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .final .fnav a:hover span { transform: none; }
+}
+@media (min-width: 1024px) {
+  .final .final__grid { grid-template-columns: minmax(0, 3.6fr) minmax(0, 5fr) minmax(0, 3.8fr); column-gap: clamp(2rem, 4vw, 4rem); }
+}
+.final .fnav span { white-space: nowrap; }
+.final .fcontact a { grid-template-columns: 4.8rem minmax(0, 1fr) 1rem; }
+.final .fcontact__v { white-space: nowrap; overflow-wrap: normal; }
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .final .fnav span { font-size: 1.02rem; }
+  .final .fcontact__v { font-size: 1.05rem; }
+}
+@media (max-width: 1023px) {
+  .final .final__nav, .final .final__contact { grid-column: 1 / -1; }
+}
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .final .final__grid { grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); }
+  .final .final__brand { grid-column: 1 / -1; }
+}

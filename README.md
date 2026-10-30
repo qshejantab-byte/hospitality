@@ -51,7 +51,7 @@ assets/js/main.js          mounts everything: contacts, client stories, reveals,
 |---|---|---|
 | **EmailJS delivery** | **Blocked.** Service `service_tyheci5` answers `412 Outlook: Invalid grant` (per the Marketing page's live test). The form shows an honest "not sent" state, keeps the visitor's details and offers pre-filled WhatsApp and email. | Reconnect the Outlook account in the EmailJS dashboard (Email Services → `service_tyheci5`). Confirm the template's "To Email" is `Richie@todo.rw` or `{{to_email}}`. Submit one real test from the live page and confirm it arrives. |
 | **Hospitality contact** | Confirmed 30 Oct 2026: richie@todo.rw and WhatsApp 0799 537 999 (wa.me/250799537999). Shown in the footer. | Done |
-| **Client stories** | Grotta Resort approved (story and photography) and shown publicly; sources in docs/ASSET_CREDITS.md. Eagleview Farm is still review-only. | Eagleview: written consent |
+| **Client stories** | Grotta Resort and Eagleview Farm approved (stories and photography) and shown publicly; sources in docs/ASSET_CREDITS.md. | Done |
 | Privacy notice | privacy.html, linked from the form and footer; written from the actual implementation | Confirm the open items in docs/PRIVACY_OPEN_ITEMS.md |
 | Tracking | None loaded (no Pixel, no cookies) | Decide whether to add Meta Pixel / consent. The enquiry email already includes the page URL (with UTMs) and the referrer. |
 

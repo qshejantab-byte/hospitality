@@ -23,7 +23,7 @@ Unsplash and Pexels could not be used from this environment: Unsplash's search A
 
 ## Licence obligations
 
-- Credit the author and link the licence wherever the photo is shown. This is done in the footer's "Photo credits", plus a short credit line on the hero, interlude and closing images.
+- Credit the author and link the licence. Since 30 Oct 2026 all credits live on a dedicated page, `credits.html`, linked from the privacy notice footer (privacy.html → "Image credits"); the main footer link was removed at the business's request. On-image overlays and the footer credits list were removed at the business's request.
 - Indicate that changes were made ("resized and re-encoded").
 
 ## Video
@@ -40,11 +40,11 @@ The hero instead uses a slow, reduced-motion-safe camera drift on the photograph
 - Proof of results.
 - Photos of Grotta Resort, Eagleview Farm or any TODO client.
 
-Grotta and Eagleview material stays restricted to local review mode until written approval.
+Grotta Resort and Eagleview Farm material is approved for public use (30 Oct 2026) and appears only as their own client stories, with their own photographs. Stock photographs must never be presented as either client.
 
 ## Approved client material: Grotta Resort
 
-Grotta Resort approved the use of its photography and a stay story on 30 Oct 2026 (per the business). This is the **only** client material on the public page. Eagleview Farm remains review-only.
+Grotta Resort approved the use of its photography and a stay story on 30 Oct 2026 (per the business). Eagleview Farm was approved on the same terms (see below).
 
 | File | What it shows | Source | Use |
 |---|---|---|---|
@@ -59,8 +59,8 @@ Grotta Resort approved the use of its photography and a stay story on 30 Oct 202
 
 **Not used:** no prices, no guest quotes, no booking figures, and no mention of the digital concierge (TODO's role is unconfirmed). The local Grotta folder also contains an AI-generated image (`ChatGPT Image …png`); it was deliberately not used.
 
-## Eagleview Farm photograph (review only)
+## Eagleview Farm photograph and story (approved)
 
 | File | What it shows | Source | Use |
 |---|---|---|---|
-| `assets/media/eagleview/eagleview-room-1800.webp` | An Eagleview Farm room: timber walls, canopy bed, teal sofa | Supplied by TODO Growth on 30 Oct 2026. Resized to 1800px WebP. | Eagleview client story, **local review mode only**. The story stays `permission: "pending"` until Eagleview gives written approval, so it never appears publicly. |
+| `assets/media/eagleview/eagleview-room-1800.webp` | An Eagleview Farm room: timber walls, canopy bed, teal sofa | Supplied by TODO Growth on 30 Oct 2026. Resized to 1800px WebP. | Eagleview client story (Work section), public. Story and photography approved by Eagleview Farm on 30 Oct 2026, credited "Photo: Eagleview Farm, used with permission". Story facts come from eagleviewfarm.rw (checked 30 Oct 2026). The booking engine is third-party and is never claimed. |

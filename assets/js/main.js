@@ -22,7 +22,8 @@ function wireContacts() {
   document.querySelectorAll("[data-wa-display]").forEach((s) => (s.textContent = CONFIG.contact.whatsapp.display));
   document.querySelectorAll("[data-email]").forEach((a) => {
     a.href = `mailto:${CONFIG.contact.email}`;
-    a.textContent = CONFIG.contact.email;
+    const t = a.querySelector("[data-email-text]");
+    (t || a).textContent = CONFIG.contact.email;
   });
   // footer contact block: shown only once the Hospitality contact is confirmed in config
   const confirmed = CONFIG.contact.confirmed === true;
@@ -63,7 +64,7 @@ function renderStories() {
           <ol class="story__stages">${stages}</ol>
           ${results}
           ${pending && s.note ? `<p class="story__review">${esc(s.note)}</p>` : ""}
-          ${s.url ? `<a class="link" href="${esc(s.url)}" target="_blank" rel="noopener">${s.story ? `See the rooms on ${esc(s.client)}'s website` : `Visit ${esc(s.client)}`}</a>` : ""}
+          ${s.url ? `<a class="link" href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.linkText || `Visit ${s.client}`)}</a>` : ""}
         </div>
       </article>`;
   }).join("");
@@ -105,6 +106,18 @@ function initDock() {
   seen.forEach((_, el) => el && io.observe(el));
 }
 
+/* ── Back to top: scroll to the very top, then put keyboard focus there too ── */
+function initToTop() {
+  document.querySelectorAll("[data-to-top]").forEach((a) => a.addEventListener("click", (e) => {
+    e.preventDefault();
+    const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    window.scrollTo({ top: 0, behavior: reduce ? "auto" : "smooth" });
+    history.replaceState(null, "", location.pathname + location.search);
+    const target = document.querySelector(".nav__brand");
+    if (target) target.focus({ preventScroll: true });
+  }));
+}
+
 /* ── Review bar ── */
 function initReview() {
   if (!REVIEW_MODE) return;
@@ -126,4 +139,5 @@ initWho();
 initReveals();
 initDock();
 initLeadForm();
+initToTop();
 initReview();
